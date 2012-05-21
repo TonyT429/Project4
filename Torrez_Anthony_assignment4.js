@@ -5,6 +5,7 @@
 
 // Global Variables:
 
+var myPhone = "925-454-5265";                                          // problem 01
 var chgStr = "this is a test";                                                  // problem 04
 var aStr = "123,456,789,10,11,12,13,14";                            // problem 05
 var myNumber = 40025.4                                                    // problem 06
@@ -17,13 +18,23 @@ var nuStr = "42";                                                               
 // STRING:
 // 01) Does a string follow a 123-456-7890 pattern like a phone number?
 
+function isAPhoneNum () {
+		var regexPhone = /^\(?(\d{3})\)?[-. ]?(\d{3})[-. ]?(\d{4})$/;
+		if (regexPhone.test(myPhone)) {
+    			var formattedPhoneNumber = myPhone.replace(regexPhone, "$1-$2-$3");
+        		return ("Yes, " + myPhone + " is a phone number.");
+		} else {
+   		return ("Nope, " + myPhone + " is not a phone number");
+		}
+};
+
 // 02) Does a string follow an aaa@bbb.ccc pattern like an email address?
 
 // 03) Is the string a URL? (Does it start with http: or https:?)
 
 // 04) Title-case a string (split into words, then uppercase the first letter of each word)
 
-function propCase() {
+function propCase () {
 	var strChg = chgStr;
     return strChg.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 };
@@ -42,7 +53,7 @@ function myStr () {
 // NUMBER:
 // **06) Format a number to use a specific number of decimal places, as for money: 2.1 -> 2.10
 
-function decimal2() { 
+function decimal2 () { 
     var chgNum = myNumber;
     var newNum = chgNum.toFixed(2);  
     return ("$" + newNum);	 
@@ -52,7 +63,7 @@ function decimal2() {
 
 // **08) Find the number of hours or days difference between two dates.  This one gives the difference in days
 
-function tweenDays() {
+function tweenDays () {
     var aDay = (1000 * 60 * 60 * 24);
     daysTween = (Math.ceil((d2.getTime()-d1.getTime())/(aDay)));
     return daysTween;
@@ -76,6 +87,7 @@ function numChk () {
 
 //  Returned Values
 
+console.log(isAPhoneNum());                  // problem 01
 console.log(propCase());                          // problem 04
 console.log(myStr());                                // problem 05
 console.log(decimal2());                           // problem 06
