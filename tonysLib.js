@@ -3,12 +3,31 @@ var tonysLib = function () {
 //    01 - Does A String Follow A Phone Number Pattern? 
 
      function isAPhoneNum (val) {
-	      var regexPhone = /^\(?(\d{3})\)?[-. ]?(\d{3})[-. ]?(\d{4})$/;       // See  REGEX BREAKDOWN EXPLANATION     
+	      var regexPhone = /^\(?(\d{3})\)?[-. ]?(\d{3})[-. ]?(\d{4})$/;                           // See  REGEX BREAKDOWN EXPLANATION     
 		  if (regexPhone.test(val)) {                                                                           // NESTED CONDITIONAL INSIDE FUNCTION 
-    			var formattedPhoneNumber = val.replace(regexPhone, "$1-$2-$3");      
+//    			var formattedPhoneNumber = val.replace(regexPhone, "$1-$2-$3");      
         		return ("Yes, " + val + " follows a phone number pattern.");
 		 } else {
    		 return ("Nope, " + val + " does not follow a phone number pattern");
+		 }		 
+     };
+     
+//    REGEX BREAKDOWN EXPLANATION:
+//    / -  at the beginning and end of the string,   ^  - matches beginning of input,  \ - indicates next character is special and not interpreted literally,  
+//    ? - Match preceding character 0 or 1 time.  (\d{3})  - this is the area code between parans. \d = any digit, 0-9 and {3} indicates to do there 
+//    are 3 digits.   [-. ]  indicates that the 3 digits in the area code are separated from the city code by either a dash, a period, or a space.  This 
+//    pattern continues for the next 3 digits of the city exchange code and then the station code, which has 4 digits .  Finally, the $ indicates the end
+//    of input (opposite of the ^), and the / to close the string. 
+     
+     
+//    02 - Does A String Follow An aaa@bbb.ccc Pattern Like An Email Address?
+
+	function isAnEmailAddr (val) {
+	      var regexEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;       // See  REGEX BREAKDOWN EXPLANATION     
+		 	    if (regexEmail.test(val)) {                                                                             // NESTED CONDITIONAL INSIDE FUNCTION      
+        		return ("Yes, " + val + " follows a Email number pattern.");
+		  } else {
+   		 		return ("Nope, " + val + " does not follow a Email number pattern");
 		 }		 
      };
      
@@ -74,6 +93,7 @@ var tonysLib = function () {
     
     return {
          "isAPhoneNum": isAPhoneNum,
+         "isAnEmailAddr": isAnEmailAddr,
          "propCase": propCase,
          "myStr": myStr,
          "decimal2": decimal2,

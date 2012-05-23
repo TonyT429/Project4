@@ -13,6 +13,14 @@ console.log( lib.isAPhoneNum("92-454-5265"));
 console.log( lib.isAPhoneNum("925-45-5265"));
 console.log( lib.isAPhoneNum("925-454-525"));
 
+// Check 02 - Does a string follow an aaa@bbb.ccc pattern like an email address?
+
+console.log( lib.isAnEmailAddr('TonyT429@fullsail.edu'));
+console.log( lib.isAnEmailAddr('TonyT429#fullsail.edu'));
+console.log( lib.isAnEmailAddr('a.torrez@comcast.net'));
+console.log( lib.isAnEmailAddr('anthony-torrez@comcast,org'));
+console.log( lib.isAnEmailAddr('TonyT-429@fullsail.edu'));
+
 // Check 04 - Title-case A String, Split Into Words, Then Uppercase The First Letter Of Each Word.
 
 console.log( lib.propCase("this is a test"));
