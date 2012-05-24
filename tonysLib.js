@@ -127,6 +127,39 @@ var tonysLib = function () {
 //          That Key In Each Of The Objects: "a" + [{a:2}, {a:3}, {a:1}] -> [{a:1}, {a:2}, {a:3}].
 
 
+	function arraySort (val) {
+      var myArray = new Array();
+        myArray.push(val);
+      console.log(myArray);
+      for (key in myArray); 
+           console.log("For the key " + key + " element value is " + myArray[key]);
+		};
+
+			sortObj(myArray();
+
+		function sortObj(arr){
+			var sortedKeys = new Array();
+			var sortedObj = {};
+
+			for (var i in arr){
+				sortedKeys.push(i);
+			}
+				sortedKeys.sort();
+
+				for (var i in sortedKeys){
+						sortedObj[sortedKeys[i]] = arr[sortedKeys[i]];
+				}
+			return sortedObj;
+};
+
+
+
+
+arraySort(people{age});
+
+	    
+
+
 
     
 //     RETURN VALUES
