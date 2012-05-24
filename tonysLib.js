@@ -95,15 +95,18 @@ var tonysLib = function () {
      
      
 //    08 - Find The Number Of Days Difference Between 2 Dates.
-/*     
+/*
      function tweenDays (val1, val2) {
-          var date1 = val1;
-          var date2 = val2;
           var aDay = (1000 * 60 * 60 * 24);
-               daysTween = (Math.ceil((date2.getTime() - date1.getTime())/(aDay)));
+          var date1 = new date();
+          var val1 = date1.getTime();
+          var date2 = new date();
+          var val2 = date2.getTime();
+               daysTween = (Math.ceil((val2 - val1)/(aDay)));
                return daysTween;
     };
-*/    
+*/
+  
 
 
 //	  09 - Given A String Version Of A Number Such As "42", Return A Value As An Actual Number, Such As 42.  
