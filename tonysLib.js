@@ -115,19 +115,15 @@ var tonysLib = function () {
      
      
 //    08 - Find The Number Of Days Difference Between 2 Dates.
-/*
-     function tweenDays (val1, val2) {
-          var aDay = (1000 * 60 * 60 * 24);
-          var date1 = new date();
-          var val1 = date1.getTime();
-          var date2 = new date();
-          var val2 = date2.getTime();
-               daysTween = (Math.ceil((val2 - val1)/(aDay)));
-               return daysTween;
-    };
-*/
-  
 
+     function tweenDays(date1, date2) {
+     		var d1 = new Date(date1);
+    		var d2 = new Date(date2);
+   		    var aDay = (1000 * 60 * 60 * 24);                                                     // Number of milliseconds in a day 1000 * 60 seconds * 60 minutes * 24 hours
+    			daysTween = (Math.ceil((d2.getTime()-d1.getTime())/(aDay)));
+    			return ("There are " + daysTween + " days between the two dates");
+    }
+  
 
 //	  09 - Given A String Version Of A Number Such As "42", Return A Value As An Actual Number, Such As 42.  
 
@@ -157,7 +153,7 @@ var tonysLib = function () {
          "myStr": myStr,
          "decimal2": decimal2,
          "fuzzNum": fuzzNum,
-//         "tweenDays": tweenDays,
+         "tweenDays": tweenDays,
          "numChk": numChk
     }
 };

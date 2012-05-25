@@ -1,5 +1,6 @@
 var lib = new tonysLib ();
 
+// Global Variables (if I ever get problem 12 to work).
 people = [
        { name: "Gina", age: 55, hair: "blond"},
        { name: "Nichol", age: 24, hair: "brunette"},
@@ -64,18 +65,17 @@ console.log( lib.fuzzNum(29, 29));
 
 // Check 08 - Find The Number Of Days Difference Between 2 Dates.
 
-// console.log( lib.tweenDays("April 29, 1959","July 4, 2012"));
+console.log("     Problem 8");
+console.log( lib.tweenDays("April 29, 1959","July 18,1961"));
+console.log( lib.tweenDays("April 29, 1959","May 24, 2012"));
 
 // Check 09 - Given A String Version Of A Number Such As "42", Return A Value As An Actual Number, Such As 42.  
 
 console.log("     Problem 9");
+
 console.log( lib.numChk(42));
 
 //  Check 12 - Given An Array Of Objects And The Name Of A Key, Return The Array Sorted By The Value Of That Key In Each Of The Objects
 
 
-
-// Check 08 - Find The Number Of Days Difference Between 2 Dates.
-
-// console.log( lib.tweenDays("April 29, 1959","July 4, 2012"));
 
