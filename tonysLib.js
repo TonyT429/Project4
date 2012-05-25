@@ -92,6 +92,26 @@ var tonysLib = function () {
      
      
 //    07 - Fuzzy-match A Number: Is The Number Above Or Below A Number Within A Certain Percent?
+
+	function fuzzNum (val1, val2) {
+	   
+    	if (val1 < val2) {                                                                        // NESTED CONDITIONAL WITHIN FUNCTION
+       		 var percentage = ((val1 / val2) * 100);
+       		 return (val1 + " is " + percentage + "% of " + val2);
+    	} else {
+    	
+     	if (val1 > val2) {                                                                        // NESTED CONDITIONAL WITHIN NESTED CONDITIONAL
+         		var percentage = ((val1 / val2) * 100);
+           		return (val1 + " is " + percentage + "% greater than " + val2);
+         } else {
+         
+          		 if (val1 === val2) {
+              		 return (val1 + " is equal to " + val2);
+            	}
+        	}
+    	};
+	}; 
+
      
      
 //    08 - Find The Number Of Days Difference Between 2 Dates.
@@ -126,41 +146,6 @@ var tonysLib = function () {
 //   12 - Given An Array Of Objects And The Name Of A Key, Return The Array Sorted By The Value Of 
 //          That Key In Each Of The Objects: "a" + [{a:2}, {a:3}, {a:1}] -> [{a:1}, {a:2}, {a:3}].
 
-
-	function arraySort (val) {
-      var myArray = new Array();
-        myArray.push(val);
-      console.log(myArray);
-      for (key in myArray); 
-           console.log("For the key " + key + " element value is " + myArray[key]);
-		};
-
-			sortObj(myArray();
-
-		function sortObj(arr){
-			var sortedKeys = new Array();
-			var sortedObj = {};
-
-			for (var i in arr){
-				sortedKeys.push(i);
-			}
-				sortedKeys.sort();
-
-				for (var i in sortedKeys){
-						sortedObj[sortedKeys[i]] = arr[sortedKeys[i]];
-				}
-			return sortedObj;
-};
-
-
-
-
-arraySort(people{age});
-
-	    
-
-
-
     
 //     RETURN VALUES
     
@@ -171,6 +156,7 @@ arraySort(people{age});
          "propCase": propCase,
          "myStr": myStr,
          "decimal2": decimal2,
+         "fuzzNum": fuzzNum,
 //         "tweenDays": tweenDays,
          "numChk": numChk
     }
